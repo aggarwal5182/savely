@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savely — Download Videos & Photos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner container">
+    <a href="/" class="logo">Savely</a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Free · No signup · All devices</div>
+    <h1>Download anything<br>from <span class="grad">social media</span></h1>
+    <p class="hero-sub">Paste any link from Instagram, TikTok, YouTube or Twitter. Save videos and photos instantly in original quality.</p>
+
+    <!-- tabs -->
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-tab="video">Video</button>
+      <button class="tab" data-tab="photo">Photo</button>
+      <button class="tab" data-tab="reels">Reels</button>
+      <button class="tab" data-tab="story">Story</button>
+      <button class="tab" data-tab="audio">Audio</button>
+    </div>
+
+    <!-- input card -->
+    <div class="input-card">
+      <div class="input-row">
+        <input class="url-input" type="text" id="urlInput"
+               placeholder="Paste link here… e.g. https://instagram.com/p/..."
+               autocomplete="off" />
+        <button class="btn-primary" id="fetchBtn">Get info</button>
+      </div>
+      <div class="status-msg" id="statusMsg"></div>
+    </div>
+
+    <!-- result card (hidden until fetch succeeds) -->
+    <div class="result-box" id="resultBox">
+      <div class="result-preview">
+        <img class="result-thumb" id="resultThumb" src="" alt="thumbnail" />
+        <div class="result-meta">
+          <div class="result-title" id="resultTitle"></div>
+          <div class="result-author" id="resultAuthor"></div>
+          <div class="result-duration" id="resultDuration"></div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <p class="qual-label-text">Choose quality</p>
+      <div class="qual-grid" id="qualGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ─────────────────────────────────────────────────────── -->
+<section id="how" class="section container">
+  <div class="section-label">How it works</div>
+  <div class="steps">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-title">Copy the link</div>
+      <div class="step-desc">Open the app, tap share on any post, reel or story and copy the link.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-title">Paste &amp; fetch</div>
+      <div class="step-desc">Paste the URL into the field above and click "Get info" to load quality options.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-title">Save to device</div>
+      <div class="step-desc">Pick your preferred quality and the file downloads straight to your device.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PLATFORMS ───────────────────────────────────────────────────────── -->
+<section id="platforms" class="section container">
+  <div class="section-label">Supported platforms</div>
+  <div class="plat-grid">
+    <div class="plat-card"><span class="plat-icon">📸</span><span class="plat-name">Instagram</span></div>
+    <div class="plat-card"><span class="plat-icon">🎵</span><span class="plat-name">TikTok</span></div>
+    <div class="plat-card"><span class="plat-icon">▶️</span><span class="plat-name">YouTube</span></div>
+    <div class="plat-card"><span class="plat-icon">🐦</span><span class="plat-name">Twitter / X</span></div>
+    <div class="plat-card"><span class="plat-icon">📌</span><span class="plat-name">Pinterest</span></div>
+    <div class="plat-card"><span class="plat-icon">👻</span><span class="plat-name">Snapchat</span></div>
+  </div>
+</section>
+
+<!-- ── FEATURES ────────────────────────────────────────────────────────── -->
+<section class="section container">
+  <div class="section-label">Why Savely</div>
+  <div class="feats">
+    <div class="feat-card"><div class="feat-ico">⚡</div><div><div class="feat-title">Lightning fast</div><div class="feat-desc">Servers optimised for the quickest download speeds.</div></div></div>
+    <div class="feat-card"><div class="feat-ico">🔒</div><div><div class="feat-title">Private &amp; secure</div><div class="feat-desc">No login needed. Links are processed and wiped instantly.</div></div></div>
+    <div class="feat-card"><div class="feat-ico">🎯</div><div><div class="feat-title">Original quality</div><div class="feat-desc">Download at source resolution — no compression, no watermarks.</div></div></div>
+    <div class="feat-card"><div class="feat-ico">📱</div><div><div class="feat-title">All devices</div><div class="feat-desc">Works seamlessly on mobile, tablet, and desktop browsers.</div></div></div>
+  </div>
+</section>
+
+<!-- ── FAQ ─────────────────────────────────────────────────────────────── -->
+<section id="faq" class="section container">
+  <div class="section-label">FAQ</div>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">Is it free to use?<span class="faq-ico">+</span></div>
+      <div class="faq-a">Yes — completely free, forever. No account, no subscription, no hidden limits on daily downloads.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you store my downloaded files?<span class="faq-ico">+</span></div>
+      <div class="faq-a">No. Files are deleted from our server automatically within 10 minutes of generation.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What formats and quality are available?<span class="faq-ico">+</span></div>
+      <div class="faq-a">Videos are saved as MP4 (up to 1080p HD). Audio is delivered as MP3 at 192 kbps. Photos arrive as JPEG at the platform's original resolution.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I download from private accounts?<span class="faq-ico">+</span></div>
+      <div class="faq-a">No. Only publicly accessible content can be fetched. If a post requires login to view, we cannot access it either.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is this legal?<span class="faq-ico">+</span></div>
+      <div class="faq-a">Saving public content for personal, offline use is generally permitted. Copyright remains with the original creator — please don't redistribute content without permission.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
+<footer>
+  <div class="container foot-inner">
+    <div class="foot-links">
+      <a href="#">Home</a>
+      <a href="#how">How it works</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="foot-copy">© 2025 Savely. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>
